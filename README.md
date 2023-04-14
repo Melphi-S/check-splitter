@@ -1,6 +1,6 @@
 # Check-splitter
 
-## DEMO
+<a  href="https://melphi-s.github.io/check-splitter/"  target="_blank"> <font size="7">DEMO</font> </a>
 
 A small calculator to split your check for the whole company.
 

@@ -9,8 +9,6 @@ function App() {
   const [tip, setTip] = useState<string | null>(null);
   const [numberOfPeople, setNumberOfPeople] = useState<string | null>(null);
 
-  console.log(total, tip, numberOfPeople);
-
   return (
     <div className="App">
       <img src={logo} alt="logo." />
