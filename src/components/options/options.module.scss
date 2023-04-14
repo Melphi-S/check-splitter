@@ -1,0 +1,15 @@
+.options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 45px 48px 48px;
+  row-gap: 40px;
+}
+
+.buttonContainer {
+  display: grid;
+  //grid-template-columns: repeat(auto-fit, minmax(117px, 1fr));
+  grid-template-columns: repeat(3, 117px);
+  row-gap: 16px;
+  column-gap: 14px;
+}

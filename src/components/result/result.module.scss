@@ -1,0 +1,48 @@
+.result {
+  padding: 40px;
+  background: #00474B;
+  border-radius: 15px;
+  margin: 32px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  width: 333px;
+  display: grid;
+  grid-template-areas: 'value sum'
+                      'person sum';
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+
+  &:last-of-type {
+    margin-bottom: 122px;
+  }
+}
+
+.value {
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  grid-area: value;
+  align-self: end;
+}
+
+.person {
+  font-size: 13px;
+  line-height: 19px;
+  color: #7F9D9F;
+  grid-area: person;
+  align-self: start;
+}
+
+.sum {
+  font-size: 48px;
+  line-height: 71px;
+  text-align: right;
+  letter-spacing: -1px;
+  color: #26C2AE;
+  grid-area: sum;
+}
