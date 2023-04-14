@@ -1,6 +1,6 @@
 # Check-splitter
 
-<a  href="https://melphi-s.github.io/check-splitter/"  target="_blank"> <font size="8">DEMO</font> </a>
+<a  href="https://melphi-s.github.io/check-splitter/"  target="_blank"> <span style="color:#C5E4E7;font-weight:700;font-size:30px">DEMO</span> </a>
 
 The small calculator to split your check for the whole company.
 
