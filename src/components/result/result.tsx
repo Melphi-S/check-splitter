@@ -16,8 +16,9 @@ const Result = () => {
   );
 
   const totalForPerson = useMemo(
-    () => (total && numberOfPeople ? +total / +numberOfPeople : 0),
-    [total, numberOfPeople]
+    () =>
+      (total && numberOfPeople ? +total / +numberOfPeople : 0) + tipForPerson,
+    [total, numberOfPeople, tipForPerson]
   );
 
   const resetOptions = () => {
