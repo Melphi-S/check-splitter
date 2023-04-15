@@ -24,10 +24,12 @@ const Input: FC<IInputProps> = ({
   ...rest
 }) => {
   const disableNoDigits = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "e" || e.key === "-" || e.key === "+") {
-      e.preventDefault();
-    }
-    if (!hasDot && (e.key === "." || e.key === ",")) {
+    if (
+      e.key === "e" ||
+      e.key === "-" ||
+      e.key === "+" ||
+      (!hasDot && e.key === ".")
+    ) {
       e.preventDefault();
     }
   };
