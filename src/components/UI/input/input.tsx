@@ -49,7 +49,7 @@ const Input: FC<IInputProps> = ({
       errorHandler(`Can't be less than ${min}`);
     } else if (+e > max) {
       onChange(max);
-      errorHandler(`Can't be more than ${min}`);
+      errorHandler(`Can't be more than ${max}`);
     } else {
       if (e.includes(".") && e.split(".")[1].length > 2) {
         e = e.slice(0, -1);
@@ -57,6 +57,9 @@ const Input: FC<IInputProps> = ({
       }
       if (e.length > 1 && Number(e[0]) === 0 && !e.includes(".")) {
         e = e.slice(0, -1);
+      }
+      if (e.startsWith(".")) {
+        e = 0 + e;
       }
       onChange(e);
     }
