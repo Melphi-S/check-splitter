@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/check-splitter/static/css/main.c58b18e8.css",
-    "main.js": "/check-splitter/static/js/main.7f0c0613.js",
+    "main.css": "/check-splitter/static/css/main.83aa68b2.css",
+    "main.js": "/check-splitter/static/js/main.520271e3.js",
     "static/media/SpaceMono-Regular.ttf": "/check-splitter/static/media/SpaceMono-Regular.ba5622550ada9b5ff2cd.ttf",
     "static/media/logo.svg": "/check-splitter/static/media/logo.3cc0528bd46321d63d85702006069614.svg",
     "static/media/icon-dollar.svg": "/check-splitter/static/media/icon-dollar.9f9be3534a9295a6595764d63a7bf3a3.svg",
     "static/media/icon-person.svg": "/check-splitter/static/media/icon-person.65bfd20465dd1d2cb58c0b53e1160442.svg",
     "index.html": "/check-splitter/index.html",
-    "main.c58b18e8.css.map": "/check-splitter/static/css/main.c58b18e8.css.map",
-    "main.7f0c0613.js.map": "/check-splitter/static/js/main.7f0c0613.js.map"
+    "main.83aa68b2.css.map": "/check-splitter/static/css/main.83aa68b2.css.map",
+    "main.520271e3.js.map": "/check-splitter/static/js/main.520271e3.js.map"
   },
   "entrypoints": [
-    "static/css/main.c58b18e8.css",
-    "static/js/main.7f0c0613.js"
+    "static/css/main.83aa68b2.css",
+    "static/js/main.520271e3.js"
   ]
 }
