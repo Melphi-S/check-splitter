@@ -71,7 +71,7 @@ const Input: FC<IInputProps> = ({
   });
 
   return (
-    <>
+    <div>
       {label && (
         <label className={styles.label} htmlFor={label}>
           {label}
@@ -90,7 +90,7 @@ const Input: FC<IInputProps> = ({
         />
         {error && <span className={styles.validationError}>{error}</span>}
       </div>
-    </>
+    </div>
   );
 };
 
