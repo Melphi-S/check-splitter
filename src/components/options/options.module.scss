@@ -1,9 +1,15 @@
+@import '../scss/mixins';
+
 .options {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 45px 48px 48px;
   row-gap: 40px;
+
+  @include mobile {
+    margin: 32px;
+  }
 }
 
 .buttonContainer {
@@ -11,4 +17,8 @@
   grid-template-columns: repeat(3, 117px);
   row-gap: 16px;
   column-gap: 14px;
+
+  @include mobile {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

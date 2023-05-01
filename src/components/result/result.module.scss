@@ -1,3 +1,5 @@
+@import '../scss/mixins';
+
 .result {
   padding: 40px;
   background: #00474B;
@@ -6,6 +8,11 @@
   padding: 40px;
   display: flex;
   flex-direction: column;
+
+  @include mobile {
+    margin: 0 24px 32px;
+    padding: 37px 22px 24px 24px;
+  }
 }
 
 .info {
@@ -19,6 +26,14 @@
 
   &:last-of-type {
     margin-bottom: 122px;
+
+    @include mobile {
+      margin-bottom: 32px;
+    }
+  }
+
+  @include mobile {
+    width: 100%;
   }
 }
 
@@ -45,4 +60,9 @@
   letter-spacing: -1px;
   color: #26C2AE;
   grid-area: sum;
+
+  @include mobile {
+    font-size: 32px;
+    line-height: 47px;
+  }
 }

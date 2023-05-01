@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./app.css";
+import styles from "./app.module.scss";
 import logo from "../../images/logo.svg";
 import Main from "../main/main";
 import { AppContext } from "../context";
@@ -10,7 +10,7 @@ function App() {
   const [numberOfPeople, setNumberOfPeople] = useState<string | null>(null);
 
   return (
-    <div className="App">
+    <div className={styles.app}>
       <img src={logo} alt="logo." />
       <AppContext.Provider
         value={{
