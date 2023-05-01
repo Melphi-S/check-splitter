@@ -45,7 +45,7 @@ const Input: FC<IInputProps> = ({
 
   const validateValue = (e: string) => {
     if (+e < min) {
-      onChange(min);
+      onChange("");
       errorHandler(`Can't be less than ${min}`);
     } else if (+e > max) {
       onChange(max);
