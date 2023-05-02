@@ -55,14 +55,17 @@ const Input: FC<IInputProps> = ({
         e = e.slice(0, -1);
         errorHandler(`Two decimal places are allowed`);
       }
+      if (e.length > 1 && Number(e[0]) === 0 && !e.includes(".")) {
+        e = e.slice(0, -1);
+      }
       if (
-        (e.length > 1 && Number(e[0]) === 0 && !e.includes(".")) ||
         e.includes("e") ||
         e.includes("-") ||
         e.includes("+") ||
         (!hasDot && (e.includes(".") || e.includes(",")))
       ) {
         e = e.slice(0, -1);
+        errorHandler(`Only digits are allowed`);
       }
       if (e.startsWith(".")) {
         e = 0 + e;
