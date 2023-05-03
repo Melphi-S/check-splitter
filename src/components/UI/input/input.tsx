@@ -31,19 +31,23 @@ const Input: FC<IInputProps> = ({
     setTimeout(() => setError(null), 1000);
   };
 
-  const disableNoDigits = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (
-      e.key === "e" ||
-      e.key === "-" ||
-      e.key === "+" ||
-      (!hasDot && (e.key === "." || e.key === ","))
-    ) {
-      e.preventDefault();
+  const validateValue = (e: string) => {
+    e = e.replace(/[^0-9.]/g, "");
+    e = e.replace(/^([^\.]*\.)|\./g, "$1");
+    if (!hasDot && /\D/g.test(e)) {
+      e = e.replace(/\D/g, "");
       errorHandler(`Only digits are allowed`);
     }
-  };
-
-  const validateValue = (e: string) => {
+    if (e.includes(".") && e.split(".")[1].length > 2) {
+      e = Number(e).toFixed(2);
+      errorHandler(`Two decimal places are allowed`);
+    }
+    if (e.startsWith(".")) {
+      e = 0 + e;
+    }
+    if (e.length > 1 && Number(e[0]) === 0 && e[1] !== ".") {
+      e = e[0];
+    }
     if (+e < min) {
       onChange("");
       errorHandler(`Can't be less than ${min}`);
@@ -51,25 +55,6 @@ const Input: FC<IInputProps> = ({
       onChange(max);
       errorHandler(`Can't be more than ${max}`);
     } else {
-      if (e.includes(".") && e.split(".")[1].length > 2) {
-        e = e.slice(0, -1);
-        errorHandler(`Two decimal places are allowed`);
-      }
-      if (e.length > 1 && Number(e[0]) === 0 && !e.includes(".")) {
-        e = e.slice(0, -1);
-      }
-      if (
-        e.includes("e") ||
-        e.includes("-") ||
-        e.includes("+") ||
-        (!hasDot && (e.includes(".") || e.includes(",")))
-      ) {
-        e = e.slice(0, -1);
-        errorHandler(`Only digits are allowed`);
-      }
-      if (e.startsWith(".")) {
-        e = 0 + e;
-      }
       onChange(e);
     }
   };
@@ -90,10 +75,9 @@ const Input: FC<IInputProps> = ({
         {icon && <img src={icon} alt={iconAlt} className={styles.icon} />}
         <input
           {...(label && { id: label })}
-          type="number"
+          type="text"
           className={inputClassName}
           value={value}
-          onKeyDown={(e) => disableNoDigits(e)}
           onChange={(e) => validateValue(e.target.value)}
           {...rest}
         />
