@@ -33,7 +33,7 @@ const Options: FC = () => {
           />
         ))}
         <Input
-          value={tip ?? ""}
+          value={tip && !tip.includes("%") ? tip : ""}
           onChange={setTip}
           placeholder="Custom"
           hasDot={false}
